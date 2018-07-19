@@ -33,3 +33,7 @@ It's why [type annotations](https://docs.python.org/3/library/typing.html) have 
 confident about your code and your changes to this code. If you wil use it only in some places it may be not give you
 the best results. If you start new project - use them in all places. If you adding it to existing project - try to use
 them in all places where you change code to cover code more and more.
+
+When you use type annotation - try to be precise and do not use wider range of types. For example, instead of `Iterable`
+use `List` if you know that now you can handle only list of values, not any iterable type. And use `List(basestring)`
+if you know that your function can handle *only strings*.
