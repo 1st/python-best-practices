@@ -36,4 +36,6 @@ them in all places where you change code to cover code more and more.
 
 When you use type annotation - try to be precise and do not use wider range of types. For example, instead of `Iterable`
 use `List` if you know that now you can handle only list of values, not any iterable type. And use `List(basestring)`
-if you know that your function can handle *only strings*.
+if you know that your function can handle *only strings*. It will help user of your function to understand how it works
+without look inside it. If user assumes *"I can pass an iterable, nd it will be used efficiently"* but you actually will
+made a list from it and will keep all data in memory - it may confuse the user why don't you apply list instead.
